@@ -22,7 +22,9 @@
   "main": "./dist/extension.cjs",
   "icon": "./assets/icon.png",
   "files": [
-    "dist"
+    "LICENSE.md",
+    "dist/*",
+    "assets/*"
   ],
   "engines": {
     "vscode": "^1.89.0"
