@@ -1,0 +1,65 @@
+{
+  "publisher": "waynzh",
+  "name": "vscode-comment-switcher",
+  "displayName": "vscode-comment-switcher",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.1.1",
+  "description": "vscode-comment-switcher",
+  "author": "Wayne Zhang <https://github.com/waynzh>",
+  "license": "MIT",
+  "homepage": "https://github.com/waynzh/vscode-comment-switcher#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waynzh/vscode-comment-switcher"
+  },
+  "bugs": {
+    "url": "https://github.com/waynzh/vscode-comment-switcher/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.cjs",
+  "icon": "./assets/icon.png",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "category": "Comment Switcher",
+        "command": "vscode-comment-switcher.switchComment",
+        "title": "Switch Comment"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsup src/extension.ts --external vscode",
+    "dev": "nr build --watch",
+    "pack": "vsce package --no-dependencies",
+    "lint": "eslint . --cache",
+    "lint:fix": "eslint . --fix",
+    "vscode:prepublish": "nr build",
+    "publish": "vsce publish --no-dependencies",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && nr publish"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.23.2",
+    "@antfu/ni": "^0.21.12",
+    "@types/node": "^20.14.11",
+    "@types/vscode": "1.89.0",
+    "bumpp": "^9.4.1",
+    "eslint": "^9.7.0",
+    "reactive-vscode": "^0.2.8",
+    "tsup": "^8.1.2",
+    "typescript": "^5.5.3",
+    "vitest": "^2.1.5"
+  }
+}
