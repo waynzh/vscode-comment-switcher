@@ -3,7 +3,7 @@
   "name": "vscode-comment-switcher",
   "displayName": "vscode-comment-switcher",
   "type": "module",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0",
   "packageManager": "pnpm@9.1.1",
   "description": "vscode-comment-switcher",
   "author": "Wayne Zhang <https://github.com/waynzh>",
@@ -48,7 +48,7 @@
     "vscode:prepublish": "nr build",
     "publish": "vsce publish --no-dependencies",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && nr publish"
+    "release": "bumpp --no-push && nr publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.23.2",
