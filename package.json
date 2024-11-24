@@ -3,7 +3,7 @@
   "name": "vscode-comment-switcher",
   "displayName": "vscode-comment-switcher",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0-beta.1",
   "packageManager": "pnpm@9.1.1",
   "description": "vscode-comment-switcher",
   "author": "Wayne Zhang <https://github.com/waynzh>",
