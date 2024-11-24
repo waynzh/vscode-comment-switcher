@@ -39,6 +39,13 @@
         "command": "vscode-comment-switcher.switchComment",
         "title": "Switch Comment"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-comment-switcher.switchComment",
+        "key": "shift+cmd+alt+/",
+        "when": "editorTextFocus"
+      }
     ]
   },
   "scripts": {
