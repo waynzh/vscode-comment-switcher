@@ -23,6 +23,12 @@ export function multi2single(input: string) {
 }
 
 export function single2multi(input: string) {
+  // single `//`
+  if (input.match(SINGLE_LINE_COMMENT)) {
+    return input.replace(SINGLE_LINE_COMMENT, '/** $1 */')
+  }
+
+  // multiple `//`
   input = input.replace(MULTI_LINE_COMMENT_BLOCK, (match) => {
     return `/**\n${match.replace(SINGLE_LINE_COMMENT, ' * $1')}\n */`
   })
